@@ -1,7 +1,17 @@
 // estas funciones son de ejemplo
+export const selectDiscipline = () => {
 
-export const example = () => {
-  return 'example';
+  const discipline = document.getElementById("discipline");
+  const optionDiscipline = discipline.value;
+  const countryUl = document.querySelector("ul");
+  const countryLi = document.querySelector("li");
+
+
+
+  console.log("Probando...", optionDiscipline);
+  //return 'example';
+
+
 };
 
 export const anotherExample = () => {
