@@ -1,19 +1,13 @@
 // estas funciones son de ejemplo
-export const selectDiscipline = () => {
+const discipline =  document.getElementById("discipline").value;
+export const filterSport= (athletes,discipline) => {
+  const resultBySport= athletes.filter(x =>x.sport==discipline);
+  console.log("filtro de desportes", resultBySport);
+  return resultBySport;
 
-  const discipline = document.getElementById("discipline");
-  const optionDiscipline = discipline.value;
-  const countryUl = document.querySelector("ul");
-  const countryLi = document.querySelector("li");
-
-
-
-  console.log("Probando...", optionDiscipline);
-  //return 'example';
-
-
+ 
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+  return 'OMG';          
 };

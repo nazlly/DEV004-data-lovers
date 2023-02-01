@@ -1,11 +1,8 @@
-import { selectDiscipline } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-import data from './data/athletes/athletes.js';
+import { filterSport } from './data.js';
+import dataGames from './data/athletes/athletes.js';
 
-// botonGrafico.addEventListener("click", () => {   
-// return("Probando", selectDiscipline());
-    
-// })
+const discipline =  document.getElementById("discipline").value;
+const result = dataGames.filterSport(discipline);
+    console.log("Resultados", result);
 
+console.log(filterSport, dataGames);
