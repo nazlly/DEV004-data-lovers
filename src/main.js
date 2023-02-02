@@ -1,26 +1,19 @@
-import {filtersport  } from './data.js';
-import dataGames from './data/athletes/athletes.js';
-const athletes=dataGames.athletes;
+import { filtersport } from "./data.js";
+import dataGames from "./data/athletes/athletes.js";
 const discipline=document.getElementById("discipline");
+const athletes= dataGames.athletes
+const tablebody = document.querySelector("tbody");
+const listAthletes = (index) => {
+  return`
+<tr>
+<td>$(index.name)</td>
+<td>$(index.sport)</td>
+</tr>`;
 
-const tablebody=document.querySelector("tbody");
-const listAthletes=(index)=>{
+console.log(tablebody)
 
-    <tr>
-    <td>$(index.name)</td>
-    <td>$(index.sport)</td>
-    </tr>
-        return("valor de mi table",listAthletes);
-    
 };
-
-function printScreen(mostrar) {
-    tablebody.innerHTML = "",
-        mostrar.forEach((z) => {
-            tablebody.innerHTML += listAthletes(z);
-        });
-
-}
-
+discipline.addEventListener("change",(x)=>{const selectSport=filtersport(athletes,x.target.value)})
+//}
 
 console.log(filtersport, dataGames);
