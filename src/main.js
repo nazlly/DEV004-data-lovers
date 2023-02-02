@@ -10,18 +10,17 @@ const listAthletes=(index)=>{
     <td>$(index.name)</td>
     <td>$(index.sport)</td>
     </tr>
-    console.log("valor de lista atletas",listAthletes)
-    return("valor de mi table",listAthletes);
+        return("valor de mi table",listAthletes);
     
 };
 
-const printScreen=(mostrar)=>{
-tablebody.innerHTML="",
-mostrar.forEach((z) => {
-    tablebody.innerHTML +=  listAthletes (z)  
-})
-    
-};
+function printScreen(mostrar) {
+    tablebody.innerHTML = "",
+        mostrar.forEach((z) => {
+            tablebody.innerHTML += listAthletes(z);
+        });
+
+}
 
 
 console.log(filtersport, dataGames);
