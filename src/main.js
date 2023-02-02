@@ -17,4 +17,4 @@ discipline.addEventListener("change",(x)=>{const selectSport=filtersport(athlete
 //}
 
 console.log(filtersport, dataGames);
-console.log("hola");
+console.log("holabebe");
