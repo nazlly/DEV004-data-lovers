@@ -1,9 +1,5 @@
-// estas funciones son de ejemplo
-export const filtersport = (athletes,discipline) => {
-     const resultBySport= athletes.filter(athlete=>athlete.sport===discipline);
-     console.log(resultBySport)
-     return resultBySport};
-  
+export const filterSport = (valueSelect, arrayData) => {
+  const filterSelect = arrayData.filter(element  => element.sport === valueSelect);
+  return filterSelect;
+};
 
- // export const anotherExample = () => {
-  //return 'OMG';

@@ -1,29 +1,36 @@
-import { filtersport } from "./data.js";
+import { filterSport } from "./data.js";
 import dataGames from "./data/athletes/athletes.js";
 const athletes = dataGames.athletes;
-const discipline = document.getElementById("discipline");
-const tableBody = document.querySelector("tbody");
-const allAthletes = (index) => {
-  return `
-    <tr>
-    <td>${index.name}</td>
-    <td>${index.team}</td>
-    <td>${index.sport}</td>
-    <td>${index.medal}</td>
-    </tr>
-    `;
-};
-const printScreen = (mostrar) => {
-  tableBody.innerHTML = "";
-  mostrar.forEach((z) => {
-    tableBody.innerHTML += allAthletes(z);
-  });
-};
 
-printScreen(athletes);
-discipline.addEventListener("change", (x) => {
-  const selectSport = filtersport(athletes.sport, x.target.value);
-  printScreen(selectSport);
+const discipline = document.querySelector("#discipline");
+const tableSport = document.getElementById("tableSport");
+
+const createTable = function(arrayDataFiltrado) {
+  let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th></tr>";
+  for(let elements of arrayDataFiltrado) {
+    let fila = "<tr>"
+
+    fila += "<td>"
+    fila += elements.name;
+    fila += "</td>";
+
+    fila += "<td>";
+    fila += elements.team;
+    fila += "</td>";
+
+    fila += "</tr>";
+
+    stringEncabezado += fila;
+  }
+  return stringEncabezado;
+}
+
+
+discipline.addEventListener('change', () => {
+  let valueOption = discipline.value;
+ 
+  const filtrandoData = filterSport(valueOption, athletes);
+
+  tableSport.innerHTML = createTable(filtrandoData);
+
 });
-
-console.log(filtersport, dataGames);
