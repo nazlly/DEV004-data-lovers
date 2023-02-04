@@ -1,3 +1,40 @@
+#bienvenida {
+    height: 450px;  
+    background-image: url("https://images.vexels.com/media/users/3/124935/raw/e7ccd7fbad2dff3bf6b4026168bc6c94-fondo-abstracto-colorido-de-los-juegos-olimpicos-rio-2016.jpg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin: -8px;
+    
+}
+.menuh2 {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+}
+body {
+    background-image:url("https://png.pngtree.com/background/20210710/original/pngtree-olympic-day-games-background-picture-image_996806.jpg");
+    background-size: 100vw 100vh;
+    background-size: cover;
+    background-repeat:no-repeat; 
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+
+.container-body {
+    border: 1px solid rgb(92, 145, 12);
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
 .container {
     border: 1px solid red;
     padding: 20px;
@@ -9,14 +46,25 @@
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
-    margin: 30px;
-    padding: 20px;
+    margin: 15px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .table {
     border: 1px solid green;
     margin: 30px;
     padding: 20px;
+    align-items: center;
+}
+
+.tableSport {
+    border: 1px solid purple;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title-country {
@@ -26,16 +74,25 @@
 }
 
 @media only screen and (min-width: 768px) {
+    #bienvenida {
+        height: 950px;
+    }
     .select-container {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
     }
+    .tableSport {
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
+    .menuh2{flex-direction: row;
+    }
     .container {
         flex-direction: row;
+        justify-content: center;
     }
     .select-container {
         flex-direction: row;
