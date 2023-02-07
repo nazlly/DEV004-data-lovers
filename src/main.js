@@ -1,4 +1,4 @@
-import { filterSport } from "./data.js";
+import { filterSport, sortAlphabetic } from "./data.js";
 import dataGames from "./data/athletes/athletes.js";
 const athletes = dataGames.athletes;
 
@@ -28,9 +28,47 @@ const createTable = function(arrayDataFiltrado) {
 
 discipline.addEventListener('change', () => {
   let valueOption = discipline.value;
- 
-  const filtrandoData = filterSport(valueOption, athletes);
+   const filtrandoData = filterSport(valueOption, athletes);
 
   tableSport.innerHTML = createTable(filtrandoData);
+  
+  const btnOrdenar=document.getElementById("btnOrdenar");
+  btnOrdenar.addEventListener("click",()=> {
+    let ordenarOpcion= discipline.value
+    const sortedArray = sortAlphabetic(ordenarOpcion, athletes);
+    return(tableSport.innerHTML= createTable( sortedArray))   
+  });
+
 
 });
+
+
+
+// btnOrdenar.addEventListener("click",()=>{
+  // let ordenarOpcion= ();
+  // const ordenarData= sortAlphabetic(ordenarOpcion,athletes);
+  // tableSport.innerHTML = createTable(ordenarData);
+  
+     //let valueOption = discipline.value;
+    // const filtrandoData = filterSport(valueOption, athletes);
+  // const sortedArray = ;
+  //   console.log(sortedArray);
+  //   return sortedArray;
+     
+    
+  
+
+    
+  
+
+  
+   
+   
+   
+
+
+
+ 
+
+
+
