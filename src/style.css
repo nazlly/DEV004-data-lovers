@@ -1,13 +1,14 @@
 #bienvenida {
-    height: 450px;  
-    background-image: url("https://images.vexels.com/media/users/3/124935/raw/e7ccd7fbad2dff3bf6b4026168bc6c94-fondo-abstracto-colorido-de-los-juegos-olimpicos-rio-2016.jpg");
+    height: 450px; 
+    background-image: url("../img/firstMobile.jpg");
     background-size: 100vw 100vh;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat:no-repeat;
     background-position: center;
     margin: -8px;
-    
-}
+
+       }
 .menuh2 {
     border: 1px solid black;
     padding: 15px;
@@ -88,6 +89,7 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+
     .menuh2{flex-direction: row;
     }
     .container {
