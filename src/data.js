@@ -19,3 +19,11 @@ export const sortAlphabetic = (arrayFiltrado) => {
   });
   return arrayFiltrado;
 };
+
+// filtro de medallas 
+export const filterMedal = (valueSelect, arrayData) => {
+  const filterSelect = arrayData.filter(
+    (element) => element.medal === valueSelect
+  );
+  return filterSelect;
+};
