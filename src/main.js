@@ -66,5 +66,15 @@ medal.addEventListener('change', () => {
   const filtrandoMedalla = filterMedal(valueMedal, athletes);
   console.log("filtrado: ", filtrandoMedalla);
   tableSport.innerHTML = createTableMedal(filtrandoMedalla);
+ 
+const groupedMedal = filtrandoMedalla.reduce((countMedal, medals) => {
+  const group = medals.medal;
+  countMedal[group] = countMedal[group] || {count: 0};
+  countMedal[group].count++;
+  return countMedal;
+
+
+});
+
 
 });
