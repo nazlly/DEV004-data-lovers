@@ -1,4 +1,4 @@
-import { filterSport, sortAlphabetic, filterMedal } from "./data.js";
+import { filterSport, sortAlphabetic, filterMedal, filterMap, reduceMedals } from "./data.js";
 import dataGames from "./data/athletes/athletes.js";
 const athletes = dataGames.athletes;
 
@@ -8,7 +8,7 @@ const tableSport = document.getElementById("tableSport");
 const btnOrdernar = document.getElementById("btnOrdenar");
 const medal = document.getElementById("medal");
 
-
+// Tabla de Disciplinas
 const createTable = function (arrayDataFiltrado) {
   let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th></tr>";
   for (let elements of arrayDataFiltrado) {
@@ -29,6 +29,7 @@ const createTable = function (arrayDataFiltrado) {
   return stringEncabezado;
 };
 
+// Tabla de Medallas
 const createTableMedal = function (arrayDataFiltrado) {
   let stringEncabezado = "<tr><th>Pais</th><th>Cantidad</th></tr>";
   for (let elements of arrayDataFiltrado) {
@@ -39,7 +40,7 @@ const createTableMedal = function (arrayDataFiltrado) {
     fila += "</td>";
 
     fila += "<td>";
-    fila += elements.team;
+    fila += elements.count;
     fila += "</td>";
 
     fila += "</tr>";
@@ -48,6 +49,8 @@ const createTableMedal = function (arrayDataFiltrado) {
   }
   return stringEncabezado;
 };
+
+//Evento Change para mostrar la data filtrada de disciplina y hacer el orden ascendente de la data filtrada
 
 discipline.addEventListener("change", () => {
   let valueOption = discipline.value;
@@ -60,21 +63,22 @@ discipline.addEventListener("change", () => {
   });
 });
 
+// Evento Change calcular medallas
 medal.addEventListener('change', () => {
   let valueMedal = medal.value;
  
   const filtrandoMedalla = filterMedal(valueMedal, athletes);
-  console.log("filtrado: ", filtrandoMedalla);
-  tableSport.innerHTML = createTableMedal(filtrandoMedalla);
+  
+  console.log("Primera data filtrada:", filtrandoMedalla);
+  
+  const dataFiltrandoMedalla = filterMap([...filtrandoMedalla]);
  
-const groupedMedal = filtrandoMedalla.reduce((countMedal, medals) => {
-  const group = medals.medal;
-  countMedal[group] = countMedal[group] || {count: 0};
-  countMedal[group].count++;
-  return countMedal;
+  console.log("Data Filtrada con map:", dataFiltrandoMedalla);
 
+  const dataFinal = reduceMedals(dataFiltrandoMedalla);
 
-});
+  console.log("Data con object y reduce:", dataFinal);
 
+  tableSport.innerHTML = createTableMedal(dataFinal);
 
 });

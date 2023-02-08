@@ -20,10 +20,36 @@ export const sortAlphabetic = (arrayFiltrado) => {
   return arrayFiltrado;
 };
 
-// filtro de medallas 
+// Filtro de medallas 
 export const filterMedal = (valueSelect, arrayData) => {
   const filterSelect = arrayData.filter(
     (element) => element.medal === valueSelect
   );
   return filterSelect;
+};
+
+// Función de filtro con map
+export const filterMap = (arrayFiltrar) => {
+  const newArray = arrayFiltrar.map(elem => {
+    return {
+      team: elem.team,
+      medal: elem.medal
+    };
+  }); 
+  return newArray;
+};
+
+// Función con reduce
+export const reduceMedals = (arrayFiltradoMedalla) =>{
+  const countedObjects = arrayFiltradoMedalla.reduce((acc, obj) => {
+    const key = JSON.stringify(obj);
+    if (!acc[key]) {
+      acc[key] = { ...obj, count: 1 };
+    } else {
+      acc[key].count++;
+    }
+    return acc;
+  }, {});
+  const result = Object.values(countedObjects);
+  return result;
 };
