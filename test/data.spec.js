@@ -1,4 +1,4 @@
-import {  filterSport,} from "../src/data.js";
+import { filterSport, sortAlphabetic} from "../src/data.js";
 const ejemplo = [
   {
     name: "Giovanni Abagnale",
@@ -137,8 +137,8 @@ describe("filterSport", () => {
   it("is a function", () => {
     expect(typeof filterSport).toBe("function");
   });
-  it("returns sport", () => {
-    expect(filterSport(ejemplo, "sport", "rowing")).toEqual([
+  it("returns sport Rowing", () => {
+    expect(filterSport("Rowing", ejemplo)).toStrictEqual([
       {
         name: "Giovanni Abagnale",
         gender: "M",
@@ -165,4 +165,14 @@ describe("filterSport", () => {
       },
     ]);
   });
+});
+
+describe ("sortAlphabetic", () => {
+  it ("is a function", () => {
+    expect (typeof sortAlphabetic).toBe("function");
+  });
+
+  it ("return nombre por la letra A", () => {
+    expect(sortAlphabetic())
+  })
 });
