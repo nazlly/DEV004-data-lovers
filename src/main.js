@@ -11,7 +11,7 @@ const medal = document.getElementById("medal");
 // Tabla de Disciplinas
 const createTable = function (arrayDataFiltrado) {
   let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th></tr>";
-  for (let elements of arrayDataFiltrado) {
+  for (const elements of arrayDataFiltrado) {
     let fila = "<tr>";
 
     fila += "<td>";
@@ -32,7 +32,7 @@ const createTable = function (arrayDataFiltrado) {
 // Tabla de Medallas
 const createTableMedal = function (arrayDataFiltrado) {
   let stringEncabezado = "<tr><th>Pais</th><th>Cantidad</th></tr>";
-  for (let elements of arrayDataFiltrado) {
+  for (const elements of arrayDataFiltrado) {
     let fila = "<tr>";
 
     fila += "<td>";
@@ -53,7 +53,7 @@ const createTableMedal = function (arrayDataFiltrado) {
 //Evento Change para mostrar la data filtrada de disciplina y hacer el orden ascendente de la data filtrada
 
 discipline.addEventListener("change", () => {
-  let valueOption = discipline.value;
+  const valueOption = discipline.value;
   const filtrandoData = filterSport(valueOption, athletes);
   tableSport.innerHTML = createTable(filtrandoData);
 
@@ -65,20 +65,20 @@ discipline.addEventListener("change", () => {
 
 // Evento Change calcular medallas
 medal.addEventListener('change', () => {
-  let valueMedal = medal.value;
+  const valueMedal = medal.value;
  
   const filtrandoMedalla = filterMedal(valueMedal, athletes);
   
-  console.log("Primera data filtrada:", filtrandoMedalla);
+  //console.log("Primera data filtrada:", filtrandoMedalla);
   
   const dataFiltrandoMedalla = filterMap([...filtrandoMedalla]);
  
-  console.log("Data Filtrada con map:", dataFiltrandoMedalla);
+  //console.log("Data Filtrada con map:", dataFiltrandoMedalla);
 
   const dataFinal = reduceMedals(dataFiltrandoMedalla);
 
-  console.log("Data con object y reduce:", dataFinal);
 
   tableSport.innerHTML = createTableMedal(dataFinal);
 
 });
+//console.log(filterSport) ;
