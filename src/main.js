@@ -55,6 +55,7 @@ const createTableMedal = function (arrayDataFiltrado) {
 discipline.addEventListener("change", () => {
   const valueOption = discipline.value;
   const filtrandoData = filterSport(valueOption, athletes);
+  console.log("filtrado", filtrandoData);
   tableSport.innerHTML = createTable(filtrandoData);
 
   btnOrdernar.addEventListener("click", () => {

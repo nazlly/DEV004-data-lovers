@@ -1,10 +1,8 @@
 // Filtro de deportes
 export const filterSport = (valueSelect, arrayData) => {
-  console.log (typeof valueSelect);
   const filterSelect = arrayData.filter(
     (element) => element.sport === valueSelect
   );
-  
   return filterSelect;
 };
 

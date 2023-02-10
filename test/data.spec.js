@@ -172,7 +172,40 @@ describe ("sortAlphabetic", () => {
     expect (typeof sortAlphabetic).toBe("function");
   });
 
-  it ("return nombre por la letra A", () => {
-    expect(sortAlphabetic())
-  })
+  it ("return de forma ascendente", () => {
+    const actual = [{
+      name: "Giovanni Abagnale",
+    },
+    {
+      name: "Patimat Abakarova",
+    },
+    {
+      name: "Luc Abalo",
+    },
+    {
+      name: "Denis Mikhaylovich Ablyazin",
+    },
+    {
+      name: "Saeid Morad Abdevali",
+    }];
+    expect(sortAlphabetic(actual)).toEqual([
+      {
+        name: "Denis Mikhaylovich Ablyazin",
+      },
+      {
+        name: "Giovanni Abagnale",
+      },
+      {
+        name: "Luc Abalo",
+      },
+      {
+        name: "Patimat Abakarova",
+      },
+      {
+        name: "Saeid Morad Abdevali",
+      }
+      
+
+    ]);
+  });
 });
