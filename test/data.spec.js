@@ -1,4 +1,4 @@
-import { filterSport, sortAlphabetic} from "../src/data.js";
+import { filterSport, sortAlphabetic, filterMedal } from "../src/data.js";
 const ejemplo = [
   {
     name: "Giovanni Abagnale",
@@ -167,27 +167,29 @@ describe("filterSport", () => {
   });
 });
 
-describe ("sortAlphabetic", () => {
-  it ("is a function", () => {
-    expect (typeof sortAlphabetic).toBe("function");
+describe("sortAlphabetic", () => {
+  it("is a function", () => {
+    expect(typeof sortAlphabetic).toBe("function");
   });
 
-  it ("return de forma ascendente", () => {
-    const actual = [{
-      name: "Giovanni Abagnale",
-    },
-    {
-      name: "Patimat Abakarova",
-    },
-    {
-      name: "Luc Abalo",
-    },
-    {
-      name: "Denis Mikhaylovich Ablyazin",
-    },
-    {
-      name: "Saeid Morad Abdevali",
-    }];
+  it("return de forma ascendente", () => {
+    const actual = [
+      {
+        name: "Giovanni Abagnale",
+      },
+      {
+        name: "Patimat Abakarova",
+      },
+      {
+        name: "Luc Abalo",
+      },
+      {
+        name: "Denis Mikhaylovich Ablyazin",
+      },
+      {
+        name: "Saeid Morad Abdevali",
+      },
+    ];
     expect(sortAlphabetic(actual)).toEqual([
       {
         name: "Denis Mikhaylovich Ablyazin",
@@ -203,8 +205,67 @@ describe ("sortAlphabetic", () => {
       },
       {
         name: "Saeid Morad Abdevali",
-      }
-      
+      },
+    ]);
+  });
+});
+describe("filter medalls", () => {
+  it("is a function", () => {
+    expect(typeof filterMedal).toBe("function");
+  });
+
+  it("return medal Gold", () => {
+    const actual2 = [
+      {
+        name: "Giovanni Abagnale",
+        gender: "M",
+        height: "198",
+        weight: "90",
+        sport: "Rowing",
+        team: "Italy",
+        noc: "ITA",
+        age: 21,
+        event: "Rowing Men's Coxless Pairs",
+        medal: "Bronze",
+      },
+      {
+        name: "Chantal Achterberg",
+        gender: "F",
+        height: "172",
+        weight: "72",
+        sport: "Rowing",
+        team: "Netherlands",
+        noc: "NED",
+        age: 31,
+        event: "Rowing Women's Quadruple Sculls",
+        medal: "Silver",
+      },
+      {
+        name: "Ahmad Abughaush",
+        gender: "M",
+        height: "178",
+        weight: "68",
+        sport: "Taekwondo",
+        team: "Jordan",
+        noc: "JOR",
+        age: 20,
+        event: "Taekwondo Men's Featherweight",
+        medal: "Gold",
+      },      
+    ];
+    expect(filterMedal("Gold",actual2)).toEqual([
+      {
+        name: "Ahmad Abughaush",
+        gender: "M",
+        height: "178",
+        weight: "68",
+        sport: "Taekwondo",
+        team: "Jordan",
+        noc: "JOR",
+        age: 20,
+        event: "Taekwondo Men's Featherweight",
+        medal: "Gold",
+      }, 
 
     ]);
   });
