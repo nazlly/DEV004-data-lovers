@@ -1,105 +1,138 @@
 #bienvenida {
-    height: 450px; 
-    background-image: url("../img/firstMobile.jpg");
-    background-size: 100vw 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-position: center;
-    margin: -8px;
+  height: 450px;
+  background-image: url("../img/firstMobile.jpg");
+  background-size: 100vw 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -8px;
+}
 
-       }
+#btnKnow {
+  width: 150px;
+  height: 50px;
+  font-family: "Capriola", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color:hsl(240deg 7% 97%);
+  background-color: hsl(242deg 88% 66% / 28%);
+  border: 1px solid;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  font-family: Capriola, sans-serif;
+  padding-left: -30px;
+  margin: 10px;
+  position: relative;
+  top: 330px;
+  left: 150px;
+}
+
+#btnKnow:hover {
+  background-color: #f7787e;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
 .menuh2 {
-    border: 1px solid black;
-    padding: 15px;
-    margin: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  
+  border: 1px solid black;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 body {
-    background-image:url("https://png.pngtree.com/background/20210710/original/pngtree-olympic-day-games-background-picture-image_996806.jpg");
-    background-size: 100vw 100vh;
-    background-size: cover;
-    background-repeat:no-repeat; 
-    background-attachment: fixed;
-    margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} */
-
-
-.container-body {
-    border: 1px solid rgb(92, 145, 12);
-    margin: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+  background-image: url("https://i.pinimg.com/originals/e4/39/27/e43927ab61f1392823eee6242992cf78.jpg");
+  background-size: 100vw 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+*/ .container-body {
+  border: 1px solid rgb(92, 145, 12);
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .container {
-    border: 1px solid red;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid red;
+  padding: 20px;
+  flex-direction: column;
+  display: none;
 }
 
 .select-container {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    padding: 15px;
-    align-items: center;
-    justify-content: space-evenly;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .table {
-    border: 1px solid green;
-    margin: 30px;
-    padding: 20px;
-    align-items: center;
+  border: 1px solid green;
+  margin: 30px;
+  padding: 20px;
+  align-items: center;
 }
 
 .tableSport {
-    border: 1px solid purple;
-    margin: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid purple;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-country {
-    border: 1px solid orangered;
-    margin: 10px;
-    padding: 20px;
+  border: 1px solid orangered;
+  margin: 10px;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-    #bienvenida {
-        height: 950px;
-    }
-    .select-container {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .tableSport {
-        align-items: center;
-    }
+  #bienvenida {
+    height: 950px;
+  }
+  .kwow:hover {
+    position: relative;
+    top: 800px;
+    left: 700px;
+  }
+  .select-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .tableSport {
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-
-    .menuh2{flex-direction: row;
-    }
-    .container {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .select-container {
-        flex-direction: row;
-    }
-    .country {
-        flex-direction: row;
-    }
+  .menuh2 {
+    flex-direction: row;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .select-container {
+    flex-direction: row;
+  }
+  .country {
+    flex-direction: row;
+  }
 }

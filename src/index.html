@@ -10,14 +10,18 @@
   </head>
 
   <body class="container-body">
-    <section id="bienvenida">
+    <section id="bienvenida" class="bienvenida">
       <div class="contenedor">
-        <!-- <button type="submit" id="inicio" class="search1"> <strong>CONOCE MAS</strong>  </button> -->
+        <button id="btnKnow" class="btnKnow" type="submit">Conocer más</button>
       </div>
     </section>
+       
 
     <div class="container">
+      <button class="btnRegresar" id="btnRegresar" type="submit">Regresar</button>
+            
       <h3 class="menuh2">OLIMPIADAS RIO 2016</h3>
+
       <div class="select-container">
         <label>
           Seleccione una disciplina
@@ -78,8 +82,11 @@
         </label>
       
       </div>
+
+      <table class="tableSport" id="tableSport"></table>
+
     </div>
-    <table class="tableSport" id="tableSport"></table>
+    
 
     <script src="./main.js" type="module"></script>
   </body>
