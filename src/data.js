@@ -15,12 +15,12 @@ export const sortAlphabetic = (arrayFiltrado) => {
     if (a.name > b.name) {
       return 1;
     }
-    return 0;
+    //return 0;
   });
   return arrayFiltrado;
 };
 
-// Filtro de medallas 
+// Filtro de medallas
 export const filterMedal = (valueSelect, arrayData) => {
   const filterSelect = arrayData.filter(
     (element) => element.medal === valueSelect
@@ -30,17 +30,18 @@ export const filterMedal = (valueSelect, arrayData) => {
 
 // Función de filtro con map
 export const filterMap = (arrayFiltrar) => {
-  const newArray = arrayFiltrar.map(elem => {
+  const newArray = arrayFiltrar.map((elem) => {
     return {
       team: elem.team,
-      medal: elem.medal
+      medal: elem.medal,
     };
-  }); 
+  });
+  //console.log("newArray",newArray)
   return newArray;
 };
 
 // Función con reduce
-export const reduceMedals = (arrayFiltradoMedalla) =>{
+export const reduceMedals = (arrayFiltradoMedalla) => {
   const countedObjects = arrayFiltradoMedalla.reduce((acc, obj) => {
     const key = JSON.stringify(obj);
     if (!acc[key]) {

@@ -1,4 +1,10 @@
-import { filterSport, sortAlphabetic, filterMedal } from "../src/data.js";
+import {
+  filterSport,
+  sortAlphabetic,
+  filterMedal,
+  filterMap,
+  reduceMedals
+} from "../src/data.js";
 const ejemplo = [
   {
     name: "Giovanni Abagnale",
@@ -166,7 +172,6 @@ describe("filterSport", () => {
     ]);
   });
 });
-
 describe("sortAlphabetic", () => {
   it("is a function", () => {
     expect(typeof sortAlphabetic).toBe("function");
@@ -209,7 +214,7 @@ describe("sortAlphabetic", () => {
     ]);
   });
 });
-describe("filter medalls", () => {
+describe("filter medals", () => {
   it("is a function", () => {
     expect(typeof filterMedal).toBe("function");
   });
@@ -251,9 +256,9 @@ describe("filter medalls", () => {
         age: 20,
         event: "Taekwondo Men's Featherweight",
         medal: "Gold",
-      },      
+      },
     ];
-    expect(filterMedal("Gold",actual2)).toEqual([
+    expect(filterMedal("Gold", actual2)).toEqual([
       {
         name: "Ahmad Abughaush",
         gender: "M",
@@ -265,8 +270,101 @@ describe("filter medalls", () => {
         age: 20,
         event: "Taekwondo Men's Featherweight",
         medal: "Gold",
-      }, 
+      },
+    ]);
+  });
+});
+describe("filterMap", () => {
+  it("is a function", () => {
+    expect(typeof filterMap).toBe("function");
+  });
 
+  it("return team and medal", () => {
+    const actual3 = [
+      {
+        name: "Giovanni Abagnale",
+        gender: "M",
+        height: "198",
+        weight: "90",
+        sport: "Rowing",
+        team: "Italy",
+        noc: "ITA",
+        age: 21,
+        event: "Rowing Men's Coxless Pairs",
+        medal: "Bronze",
+      },
+      {
+        name: "Chantal Achterberg",
+        gender: "F",
+        height: "172",
+        weight: "72",
+        sport: "Rowing",
+        team: "Netherlands",
+        noc: "NED",
+        age: 31,
+        event: "Rowing Women's Quadruple Sculls",
+        medal: "Silver",
+      },
+      {
+        name: "Ahmad Abughaush",
+        gender: "M",
+        height: "178",
+        weight: "68",
+        sport: "Taekwondo",
+        team: "Jordan",
+        noc: "JOR",
+        age: 20,
+        event: "Taekwondo Men's Featherweight",
+        medal: "Gold",
+      },
+    ];
+    expect(filterMap(actual3)).toEqual([
+      {
+        team: "Italy",
+        medal: "Bronze",
+      },
+      {
+        team: "Netherlands",
+        medal: "Silver",
+      },
+      {
+        team: "Jordan",
+        medal: "Gold",
+      },
+    ]);
+  });
+});
+describe("reduceMedals", () => {
+  it("is a function", () => {
+    expect(typeof reduceMedals).toBe("function");
+  });
+
+  it("return silver", () => {
+    const actual4 = [
+      {
+        team: "Russia",
+        medal: "Silver",
+      },
+      {
+        team: "Russia",
+        medal: "Silver",
+      },
+      {
+        team: "Russia",
+        medal: "Bronze",
+      },
+     
+      
+      
+    ];
+    expect(reduceMedals(actual4)).toEqual([
+      {
+        team: "Russia",medal: "Silver",count:2
+      },
+      {
+        team: "Russia",medal: "Bronze",count:1
+      },
+                 
     ]);
   });
 });
