@@ -6,7 +6,25 @@ const athletes = dataGames.athletes;
 const discipline = document.querySelector("#discipline");
 const tableSport = document.getElementById("tableSport");
 const btnOrdernar = document.getElementById("btnOrdenar");
+const btnKnow = document.getElementById("btnKnow");
 const medal = document.getElementById("medal");
+const container = document.getElementsByClassName("container");
+const bienvenida = document.getElementsByClassName("bienvenida");
+const btnRegresar = document.getElementById("btnRegresar");
+
+// Evento que da accionar al botón know
+btnKnow.addEventListener("click", () => {
+  container[0].style.display = "flex";
+  bienvenida[0].style.display = "none";
+});
+
+// Evento para regresar a Pantalla Principal
+btnRegresar.addEventListener("click", () => {
+  container[0].style.display = "none";
+  bienvenida[0].style.display = "block";
+});
+
+
 
 // Tabla de Disciplinas
 const createTable = function (arrayDataFiltrado) {
