@@ -6,7 +6,7 @@
 
 .container-body {
   height: 540px;
-  background-image: url("https://i.pinimg.com/originals/e4/39/27/e43927ab61f1392823eee6242992cf78.jpg");
+  background: linear-gradient(180deg, green, white, yellow);
   background-size: cover;
   background-attachment: fixed; 
   background-repeat: no-repeat;
@@ -16,24 +16,12 @@
   display: flex;
   flex-direction: column;
 }
-/* .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.headerRio {
- width: 250px;
- height: 200px;
-}
-.headerOlimp {
-  width: 250px;
-  height: 180px;
-} */
 
 .slider {
   width: 100%;
-  height: 600px;
+  height: 200px;
   overflow: hidden;
+  
 }
 
 .slider ul {
@@ -49,7 +37,9 @@
 
 .slider img {
   width: 100%;
-  height: 100%;
+  height: 50vw;
+  background-position: center;
+  object-fit: revert;
 
 }
 
@@ -67,6 +57,14 @@
   100%{margin-left: -300%;}
 }
 
+.title {
+  width: 300px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .menuh2 {
   border: 1px solid black;
@@ -77,14 +75,29 @@
   justify-content: space-evenly;
 }
 .select-container {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   margin: 15px;
   padding: 15px;
   align-items: center;
   justify-content: space-evenly;
-}
+  gap: 5px;
+  /* diseño select*/
+  background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  }
+
+  .select-container:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
 
 .table {
   border: 1px solid green;
@@ -108,6 +121,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  
+.container-destok {
+  display: flex;
+  justify-content: space-between;
+}
   .select-container {
     flex-direction: row;
     justify-content: space-evenly;
@@ -116,6 +134,7 @@
   .tableSport {
     align-items: center;
   }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -132,4 +151,9 @@
   .country {
     flex-direction: row;
   }
+  .title {
+    width: 400px;
+  }
 }
+
+
