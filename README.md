@@ -2,8 +2,8 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Resumen del proyecto](#1-resumen del proyecto)
+* [2. Descripcion del Proyecto](#2-descripcion del Proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -14,19 +14,16 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del Proyecto
+En este proyecto se contruyo una pagina web donde por medio una data donde le permitamoos al usuario visualizar, filtrar, ordenar y calcular de manera facil e interactiva.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+## 2. Descripcion del Proyecto
+esta  paginaes una propuesta de interaccion con informacion de los juegos olimpicos rio 2016, en la  que se puede interactuar de manera facil con esta  informacion y ademas aprender sobre las diferentes diciplinas y las cantidad de medallas que ganaron lo diferentes paises y haci generar una amplia cultura en conocimiento de deporte , esta  pagina  fue  pensada  para  cualquier  usuario que  desee  conocer  sobre  los  juegos  olimpicos  ya sea  de manera  recreativa  o de prendizaje.
+### Hallazgos
+se puedo descubrir que esta  informacion no solo en necesaria solo para  personas que desee hacer  consultas  por  investigacion de colegio o preparatorias , si no para tambien parra  personas  interesadas  en saber  ma por  recreacion .
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
 
-## 2. Resumen del proyecto
+
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario

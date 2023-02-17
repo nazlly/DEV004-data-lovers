@@ -103,14 +103,17 @@
 #btnOrdenar {
     /*border-color: #3498db;
     */color: #fff;
-    box-shadow: 0 0 40px 40px #58c108 inset, 0 0 0 0 #22bb1f;
+    box-shadow: 0 0 40px 40px #08c1ab inset, 0 0 0 0 #22bb1f;
     transition: all 150ms ease-in-out;
     /*box-sizing: border-box;
     */appearance: none;
     background-color: transparent ;
-    border-radius: 50%;
+    border-radius: 10px;
     padding: 5px 15px;
-
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }  
 #btnOrdenar:hover:focus {
   box-shadow: 0 0 10px 0 hsl(186, 85%, 39%) inset, 0 0 10px 4px #1492d1;
