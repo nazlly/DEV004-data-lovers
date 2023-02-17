@@ -9,21 +9,35 @@ const btnOrdernar = document.getElementById("btnOrdenar");
 const medal = document.getElementById("medal");
 const container = document.getElementsByClassName("container");
 
+//tabla  de visualizacion de data 
+const createTableAthletes = function (athletes) {
+  let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th><th>Team</th><th>Medalla</th></tr>";
+  for (const elements of athletes) {
+    let fila = "<tr>";
 
-// Evento que da accionar al botón know
-// btnKnow.addEventListener("click", () => {
-//   container[0].style.display = "flex";
-//   bienvenida[0].style.display = "none";
-// });
+    fila += "<td>";
+    fila += elements.name;
+    fila += "</td>";
 
-// // Evento para regresar a Pantalla Principal
-// btnRegresar.addEventListener("click", () => {
-//   container[0].style.display = "none";
-//   bienvenida[0].style.display = "block";
-// });
+    fila += "<td>";
+    fila += elements.sport;
+    fila += "</td>";
 
+    fila += "<td>";
+    fila += elements.team;
+    fila += "</td>";
 
+    fila += "<td>";
+    fila += elements.medal;
+    fila += "</td>";
 
+    fila += "</tr>";
+
+    stringEncabezado += fila;
+  }
+  return stringEncabezado;
+};
+tableSport.innerHTML = createTableAthletes(athletes);
 // Tabla de Disciplinas
 const createTable = function (arrayDataFiltrado) {
   let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th></tr>";
