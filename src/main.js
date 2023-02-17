@@ -7,7 +7,7 @@ const discipline = document.querySelector("#discipline");
 const tableSport = document.getElementById("tableSport");
 const btnOrdernar = document.getElementById("btnOrdenar");
 const medal = document.getElementById("medal");
-const container = document.getElementsByClassName("container");
+//const container = document.getElementsByClassName("container");
 
 //tabla  de visualizacion de data 
 const createTableAthletes = function (athletes) {
