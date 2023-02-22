@@ -22,6 +22,8 @@ los objetivos que se han llegado a entender y aplicar en el proyecto.
 
 ### Web APIs
 
+
+
 - [x ] **Uso de selectores del DOM**
 - [x ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 - [x ] **Manipulación dinámica del DOM**
