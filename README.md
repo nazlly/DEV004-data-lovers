@@ -59,10 +59,10 @@ los objetivos que se han llegado a entender y aplicar en el proyecto.
 
 ## 4. Historias de usuario
 
-
+![Historia de Usuario](src/img/historiasdesuario.png)
 
 #### Prototipo de baja fidelidad
-
+![Prototipo de Baja Fidelidad](src/img/prototipodebajafidelidad.jpeg)
 
 #### Prototipo de alta fidelidad
 
@@ -70,12 +70,23 @@ los objetivos que se han llegado a entender y aplicar en el proyecto.
 ## 5. Testeos de usabilidad
 
 se realiza el testeo de las funiones aplicadas en el proyecto las  cuales  fueron realizadas y aplicadas al proyecto
-
+![test](src/img/test.png)
 
 ### Pruebas unitarias,problemas encontrados
 
-## 6. prototipo terminado imagenes responsive
+en el tes  se presentaba  problemas  como el de que  pasaba las funciones tasn de  filtrado como el de  calculo y  ordenar  pero no pasaba  el testeo por  ejemplo.
 
+al reconocer  esto incimos  un cambio completo realizamos  un testeo con la  compracion de una data  y lo esperado de esta manera  pudimos  realizzar  este  testeo 
+
+## 6. Proyecto terminado imagenes responsive
+proyecto movil
+![proyecto movi](src/img/proyectomovil.png)
+
+proyecto tablet
+![proyecto tablet](src/img/proyectotablet.png)
+
+proyecto destock
+![proyecto destock](src/img/proyectoDespock.png)
 
 
 ### Checklist
