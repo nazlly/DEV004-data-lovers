@@ -1,4 +1,10 @@
-import { filterSport, sortAlphabetic, filterMedal, filterMap, reduceMedals } from "./data.js";
+import {
+  filterSport,
+  sortAlphabetic,
+  filterMedal,
+  filterMap,
+  reduceMedals,
+} from "./data.js";
 import dataGames from "./data/athletes/athletes.js";
 const athletes = dataGames.athletes;
 
@@ -9,9 +15,10 @@ const btnOrdernar = document.getElementById("btnOrdenar");
 const medal = document.getElementById("medal");
 //const container = document.getElementsByClassName("container");
 
-//tabla  de visualizacion de data 
+//tabla  de visualizacion de data
 const createTableAthletes = function (athletes) {
-  let stringEncabezado = "<tr><th>Nombre</th><th>Selección</th><th>Team</th><th>Medalla</th></tr>";
+  let stringEncabezado =
+    "<tr><th>Nombre</th><th>Selección</th><th>Team</th><th>Medalla</th></tr>";
   for (const elements of athletes) {
     let fila = "<tr>";
 
@@ -95,21 +102,19 @@ discipline.addEventListener("change", () => {
 });
 
 // Evento Change calcular medallas
-medal.addEventListener('change', () => {
+medal.addEventListener("change", () => {
   const valueMedal = medal.value;
- 
+
   const filtrandoMedalla = filterMedal(valueMedal, athletes);
-  
+
   //console.log("Primera data filtrada:", filtrandoMedalla);
-  
+
   const dataFiltrandoMedalla = filterMap([...filtrandoMedalla]);
- 
+
   //console.log("Data Filtrada con map:", dataFiltrandoMedalla);
 
   const dataFinal = reduceMedals(dataFiltrandoMedalla);
 
-
   tableSport.innerHTML = createTableMedal(dataFinal);
-
 });
 //console.log(filterSport) ;
